@@ -1,0 +1,381 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://hrac.gd" type="Script" id=1]
+[ext_resource path="res://tile_dlazdice/travnik.tres" type="TileSet" id=2]
+[ext_resource path="res://player.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://sprite/sHlina.png" type="Texture" id=4]
+[ext_resource path="res://tile_dlazdice/tile_hlina.tres" type="TileSet" id=5]
+[ext_resource path="res://sound/theme.mp3" type="AudioStream" id=6]
+[ext_resource path="res://sprite/pozadi.png" type="Texture" id=7]
+[ext_resource path="res://sprite/teren/stromy_tri.png" type="Texture" id=8]
+[ext_resource path="res://sprite/teren/ztmaveni.png" type="Texture" id=9]
+[ext_resource path="res://sprite/teren/kopec_pruhledny.png" type="Texture" id=10]
+[ext_resource path="res://sprite/teren/strom2.png" type="Texture" id=11]
+[ext_resource path="res://sprite/teren/strom1.png" type="Texture" id=12]
+[ext_resource path="res://sprite/teren/dum.png" type="Texture" id=13]
+[ext_resource path="res://sprite/teren/strom_za4.png" type="Texture" id=14]
+[ext_resource path="res://sprite/teren/bublina.png" type="Texture" id=15]
+[ext_resource path="res://sprite/teren/32d3709a-3133-4215-8938-4ca6f29cfaa0.png" type="Texture" id=16]
+[ext_resource path="res://sprite/teren/trava2.png" type="Texture" id=17]
+[ext_resource path="res://sprite/teren/strom_za3.png" type="Texture" id=18]
+[ext_resource path="res://sprite/teren/strom_za.png" type="Texture" id=19]
+[ext_resource path="res://sprite/teren/jeden_strom.png" type="Texture" id=20]
+[ext_resource path="res://sprite/teren/trava1.png" type="Texture" id=21]
+[ext_resource path="res://sprite/teren/f0530a02-f85b-4a98-a1ff-21572a1322b5.png" type="Texture" id=22]
+[ext_resource path="res://sprite/teren/kopec.png" type="Texture" id=23]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 395.442, 100 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 841.981, 76.3489 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15.619, 39.4803 )
+
+[node name="plosinovka" type="Node2D"]
+
+[node name="ztmaveni" type="Sprite" parent="."]
+position = Vector2( 3330.12, 558 )
+scale = Vector2( 6.48608, 1.52899 )
+z_index = 100
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ztmaveni_kopec" type="Sprite" parent="."]
+position = Vector2( 176, 911 )
+scale = Vector2( 1.32535, 1.06319 )
+z_index = 90
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="kopec" type="Sprite" parent="."]
+position = Vector2( 1520, 874.438 )
+scale = Vector2( 1.602, 0.701389 )
+z_index = 80
+texture = ExtResource( 10 )
+offset = Vector2( -447.566, -27 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="trava1" type="Sprite" parent="."]
+position = Vector2( 637, 650 )
+z_index = -31
+texture = ExtResource( 16 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1024, 512 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 510, 296 )
+scale = Vector2( 1.00781, 1.17188 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="stromy" type="Sprite" parent="."]
+position = Vector2( 1997, 505 )
+scale = Vector2( 0.51354, 0.51354 )
+texture = ExtResource( 8 )
+
+[node name="srtom7" type="Sprite" parent="."]
+position = Vector2( 172, 321.751 )
+scale = Vector2( 0.73, 1.11293 )
+texture = ExtResource( 14 )
+
+[node name="strom_za1" type="Sprite" parent="."]
+position = Vector2( 1143, 462 )
+scale = Vector2( 1, 1.23966 )
+texture = ExtResource( 14 )
+offset = Vector2( 28, -81.071 )
+
+[node name="StromZa" type="Sprite" parent="."]
+position = Vector2( 1362, 274 )
+scale = Vector2( 0.765, 1.32931 )
+texture = ExtResource( 19 )
+offset = Vector2( 0, 63.9429 )
+
+[node name="StromZa2" type="Sprite" parent="."]
+position = Vector2( 619, 154 )
+scale = Vector2( 0.3875, 1.32931 )
+texture = ExtResource( 19 )
+offset = Vector2( 0, 63.9429 )
+
+[node name="StromZa3" type="Sprite" parent="."]
+position = Vector2( 754, 111 )
+scale = Vector2( 0.22375, 1.32931 )
+texture = ExtResource( 19 )
+offset = Vector2( 0, 63.9429 )
+
+[node name="StromZa4" type="Sprite" parent="."]
+position = Vector2( 1598, 199 )
+scale = Vector2( 0.22375, 1.32931 )
+texture = ExtResource( 19 )
+offset = Vector2( 0, 63.9429 )
+
+[node name="StromZa5" type="Sprite" parent="."]
+position = Vector2( 2121, 185.651 )
+scale = Vector2( 0.22375, 0.799138 )
+texture = ExtResource( 19 )
+offset = Vector2( 0, 63.9429 )
+
+[node name="StromZa6" type="Sprite" parent="."]
+position = Vector2( 2192, 214.831 )
+scale = Vector2( 0.22375, 0.937069 )
+texture = ExtResource( 19 )
+offset = Vector2( 0, 63.9429 )
+
+[node name="StromZa7" type="Sprite" parent="."]
+position = Vector2( 2364, 166 )
+scale = Vector2( 0.316875, 1.32931 )
+texture = ExtResource( 19 )
+offset = Vector2( 0, 63.9429 )
+
+[node name="StromZa8" type="Sprite" parent="."]
+position = Vector2( 2151.31, 26 )
+scale = Vector2( 0.126873, 1.32931 )
+texture = ExtResource( 19 )
+offset = Vector2( 0, 63.9429 )
+
+[node name="StromyTri" type="Sprite" parent="."]
+position = Vector2( 1437, 708 )
+scale = Vector2( 0.844752, 0.984042 )
+z_index = 70
+texture = ExtResource( 8 )
+
+[node name="Strom3" type="Sprite" parent="."]
+position = Vector2( 1539, 310 )
+scale = Vector2( 1, 1.33143 )
+texture = ExtResource( 18 )
+
+[node name="Strom4" type="Sprite" parent="."]
+position = Vector2( 2284, 230 )
+scale = Vector2( 1, 1.33143 )
+texture = ExtResource( 18 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+visible = false
+position = Vector2( 3956, 777 )
+rotation = 2.95135
+scale = Vector2( 4.85937, 0.644487 )
+z_index = 12
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 4060.63, 814.898 )
+rotation = -0.211185
+z_index = 21
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 5266, 699 )
+rotation = -3.15905
+z_index = 21
+shape = SubResource( 4 )
+
+[node name="TileMap" type="TileMap" parent="."]
+visible = false
+position = Vector2( 0, -100 )
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 128, 128 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( 327687, 0, 0, 393223, 0, 0, 458759, 0, 0, 524295, 0, 0, 589831, 0, 0, 655367, 0, 0, 720903, 0, 0, 786439, 0, 0, 851975, 0, 0, 917504, 0, 0, 917505, 0, 0, 917506, 0, 0, 917507, 0, 0, 917508, 0, 0, 917509, 0, 0, 917510, 0, 0, 917511, 0, 0, 917512, 0, 0, 917513, 0, 0, 917514, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 917518, 0, 0, 917519, 0, 0, 917520, 0, 0, 917521, 0, 0, 917522, 0, 0, 917523, 0, 0, 917524, 0, 0, 917525, 0, 0, 917526, 0, 0, 917527, 0, 0, 917528, 0, 0, 917529, 0, 0, 917530, 0, 0, 917531, 0, 0, 917532, 0, 0, 917533, 0, 0, 917534, 0, 0, 917535, 0, 0, 917536, 0, 0, 917537, 0, 0, 917538, 0, 0, 917539, 0, 0, 917540, 0, 0, 917541, 0, 0, 917542, 0, 0, 917543, 0, 0, 917544, 0, 0, 917545, 0, 0, 917546, 0, 0, 917547, 0, 0, 917548, 0, 0, 917549, 0, 0, 917550, 0, 0, 917551, 0, 0, 917552, 0, 0, 917553, 0, 0, 917554, 0, 0, 917555, 0, 0, 917556, 0, 0, 917557, 0, 0, 917558, 0, 0, 917559, 0, 0, 917560, 0, 0 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+visible = false
+position = Vector2( -434, -782 )
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 128, 128 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( 131044, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 262160, 0, 0, 262161, 0, 0, 262162, 0, 0, 262163, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 327696, 0, 0, 327697, 0, 0, 327698, 0, 0, 327699, 0, 0, 851958, 0, 0 )
+
+[node name="hrac" type="KinematicBody2D" parent="."]
+position = Vector2( 1019, 557 )
+z_index = 1
+script = ExtResource( 1 )
+
+[node name="player_sprite" type="AnimatedSprite" parent="hrac"]
+position = Vector2( 6, 9 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 3 )
+speed_scale = 10.0
+
+[node name="Camera2D" type="Camera2D" parent="hrac/player_sprite"]
+position = Vector2( 400, -4 )
+offset = Vector2( 0, -100 )
+current = true
+smoothing_enabled = true
+smoothing_speed = 3.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hrac"]
+position = Vector2( 6.5, 16.5 )
+scale = Vector2( 1.3125, 1.20313 )
+shape = SubResource( 1 )
+
+[node name="Vystrel" type="Position2D" parent="hrac"]
+position = Vector2( 30, 20 )
+
+[node name="theme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -31.623
+autoplay = true
+
+[node name="strom2" type="Sprite" parent="."]
+position = Vector2( 912, 493 )
+scale = Vector2( 1, 1.37778 )
+z_index = 13
+texture = ExtResource( 12 )
+
+[node name="strom1" type="Sprite" parent="."]
+position = Vector2( 450, 474 )
+scale = Vector2( 1, 1.31389 )
+texture = ExtResource( 11 )
+
+[node name="strom3" type="Sprite" parent="."]
+position = Vector2( 2612, 416 )
+scale = Vector2( 0.99, 1.70139 )
+z_index = 17
+texture = ExtResource( 11 )
+
+[node name="Trava2" type="Sprite" parent="."]
+position = Vector2( 181, 666 )
+z_index = -5
+texture = ExtResource( 17 )
+
+[node name="Dum" type="Sprite" parent="."]
+position = Vector2( 1759, 492 )
+scale = Vector2( 0.1875, 0.1875 )
+z_index = -8
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="kopec2" type="Sprite" parent="."]
+position = Vector2( 2457, 926 )
+scale = Vector2( 1, 0.756944 )
+z_index = 90
+texture = ExtResource( 10 )
+offset = Vector2( -353, -118.239 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="kopec3" type="Sprite" parent="."]
+position = Vector2( 3459, 927 )
+scale = Vector2( 1, 0.756944 )
+z_index = 90
+texture = ExtResource( 10 )
+offset = Vector2( -353, -118.239 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="kopec4" type="Sprite" parent="."]
+position = Vector2( 3459, 927 )
+scale = Vector2( 1, 0.756944 )
+z_index = 90
+texture = ExtResource( 10 )
+offset = Vector2( -353, -118.239 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="kopec5" type="Sprite" parent="."]
+position = Vector2( 4458, 927 )
+scale = Vector2( 1, 0.756944 )
+z_index = 90
+texture = ExtResource( 10 )
+offset = Vector2( -353, -118.239 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="JedenStrom" type="Sprite" parent="."]
+position = Vector2( 1846.52, 604.649 )
+scale = Vector2( 0.051339, 0.0493511 )
+texture = ExtResource( 20 )
+
+[node name="JedenStrom2" type="Sprite" parent="."]
+position = Vector2( 2046, 638 )
+scale = Vector2( 0.0553967, 0.0553967 )
+texture = ExtResource( 20 )
+
+[node name="JedenStrom3" type="Sprite" parent="."]
+position = Vector2( 2164, 621 )
+scale = Vector2( 0.0553967, 0.0553967 )
+z_index = -3
+texture = ExtResource( 20 )
+
+[node name="JedenStrom4" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 1948, 632 )
+scale = Vector2( 0.108204, 0.0816984 )
+z_index = -3
+texture = ExtResource( 20 )
+
+[node name="JedenStrom5" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 4944, 828 )
+scale = Vector2( 0.138229, 0.144087 )
+z_index = -3
+texture = ExtResource( 20 )
+
+[node name="Trava3" type="Sprite" parent="."]
+position = Vector2( 1974, 942 )
+texture = ExtResource( 17 )
+
+[node name="Trava1" type="Sprite" parent="."]
+position = Vector2( 3361, 703 )
+scale = Vector2( 0.601563, 0.5625 )
+texture = ExtResource( 21 )
+
+[node name="StromZa9" type="Sprite" parent="."]
+position = Vector2( 3544, 460 )
+scale = Vector2( 1, 1.76121 )
+z_index = 18
+texture = ExtResource( 14 )
+
+[node name="StromZa11" type="Sprite" parent="."]
+position = Vector2( 4467, 541.875 )
+scale = Vector2( 1.33, 1.84784 )
+z_index = 70
+texture = ExtResource( 14 )
+
+[node name="F0530A02-f85b-4A98-a1Ff-21572A1322B5" type="Sprite" parent="."]
+position = Vector2( 4080, 848 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Kopec" type="Sprite" parent="."]
+position = Vector2( 4959, 746 )
+scale = Vector2( 1, 1.6 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StromZa10" type="Sprite" parent="."]
+position = Vector2( 4102, 258 )
+scale = Vector2( 0.86, 1 )
+texture = ExtResource( 19 )
+
+[node name="Strely" type="Node" parent="."]
