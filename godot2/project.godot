@@ -12,7 +12,7 @@ config_version=4
 
 config/name="hra1"
 run/main_scene="res://sceny/plosinovka.tscn"
-config/icon="res://icon.png"
+config/icon="res://sprite/icon.png"
 
 [display]
 

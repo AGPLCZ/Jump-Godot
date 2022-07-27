@@ -5,7 +5,7 @@
 [ext_resource path="res://sprite/sprites_player/all_player/strelba/skeleton-animation_3.png" type="Texture" id=3]
 [ext_resource path="res://sprite/sprites_player/all_player/strelba/skeleton-animation_4.png" type="Texture" id=4]
 [ext_resource path="res://sprite/sprites_player/all_player/strelba/skeleton-animation_1.png" type="Texture" id=5]
-[ext_resource path="res://Area2D.gd" type="Script" id=6]
+[ext_resource path="res://stripty/Area2D.gd" type="Script" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

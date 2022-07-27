@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=2]
 
-[ext_resource path="res://hrac.gd" type="Script" id=1]
+[ext_resource path="res://stripty/hrac.gd" type="Script" id=1]
 [ext_resource path="res://tile_dlazdice/travnik.tres" type="TileSet" id=2]
 [ext_resource path="res://player.tres" type="SpriteFrames" id=3]
 [ext_resource path="res://sprite/sHlina.png" type="Texture" id=4]
@@ -75,7 +75,6 @@ texture = ExtResource( 16 )
 motion_mirroring = Vector2( 1024, 512 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-visible = false
 position = Vector2( 510, 296 )
 scale = Vector2( 1.00781, 1.17188 )
 texture = ExtResource( 7 )
