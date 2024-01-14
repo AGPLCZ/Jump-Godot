@@ -11,6 +11,7 @@ var smer_strela = 1
 var scena_strela = preload("res://sceny/stela.tscn")
 
 
+
 func _physics_process(delta):
 	pohyb.y += gravitace*delta
 
